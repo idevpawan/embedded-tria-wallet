@@ -5,6 +5,7 @@ export type IButton = {
     title: string;
     icon?: ReactNode,
     onClick?: () => void;
+    isLoading?: boolean;
 }
 
 export type IInput = {
@@ -13,5 +14,9 @@ export type IInput = {
 }
 
 export type IUsernameSelection = {
+    setStep: (val: number) => void;
+}
+
+export type TAuthPage = {
     setStep: (val: number) => void;
 }

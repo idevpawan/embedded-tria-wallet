@@ -10,7 +10,7 @@ export default {
         "text-light-tertiary": "#FAFAFA4D",
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
+        inter: ["Inter"],
         neuePro: ["Neue Haas Grotesk Text Pro", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
