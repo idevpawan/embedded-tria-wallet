@@ -107,7 +107,24 @@ html {
   box-shadow: 0px 0px 14px 0px #ffffff40 inset;
 }
 
+/* .gauth-hover {
+  background: linear-gradient(111.34deg, #9F8BFF 0%, #7053FF 100%);
+} */
+
+.gauth-hover { 
+  background: linear-gradient(111.34deg, #9e8bff 0%, #7053ff 100%);
+ 
+}
 .gauth-hover:hover {
-  background: linear-gradient(111.34deg, #9f8bff 0%, #7053ff 100%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) !important;
+  background: linear-gradient(111.34deg, #9e8bff73 0%, #7053ff6f 100%);
+  box-shadow: inset 0 0 1px 2px #9e8bff;
+}
+
+.next-btn {
+  background: linear-gradient(111.34deg, #9e8bff 0%, #7053ff 100%);
+}
+
+.next-btn:hover {
+  background: linear-gradient(111.34deg, #9e8bffd5 0%, #7053ffa9 100%);
+  box-shadow: inset 0 0 1px 2px #9e8bff;
 }

@@ -48,8 +48,8 @@ function UsernameSelection(props: IUsernameSelection) {
           className={` ${
             setDisable
               ? " cursor-not-allowed bg-[#8080800D] text-white/40"
-              : "bg-gradient-to-r"
-          } from-[#9F8BFF] to-[#7053FF] rounded-2xl py-3 w-[120px] text-white font-neuePro font-semibold px-[14px]`}
+              : "next-btn"
+          } rounded-2xl py-3 w-[120px] text-white font-neuePro font-semibold px-[14px]`}
         >
           Next
         </button>
