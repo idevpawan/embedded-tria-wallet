@@ -13,7 +13,7 @@ const defaultOptions = {
   animationData: animationData,
 };
 
-const dummyExistedNames = ["kunl444", "kunaaal65"]
+const dummyExistedNames = ["kunl444", "kunaaal65"];
 
 function UsernameSelection(props: IUsernameSelection) {
   const { setStep } = props;
@@ -24,7 +24,7 @@ function UsernameSelection(props: IUsernameSelection) {
 
   const onHandleNext = () => {
     setStep(3);
-  }
+  };
 
   useEffect(() => {
     if (dummyExistedNames.find((e) => e === input)) {
@@ -32,7 +32,7 @@ function UsernameSelection(props: IUsernameSelection) {
     } else {
       setErrorMsg(false);
     }
-  }, [input])
+  }, [input]);
 
   return (
     <div className="bg-[#FAFAFA0A] w-full py-4 px-6 rounded-[16px]">
@@ -54,20 +54,26 @@ function UsernameSelection(props: IUsernameSelection) {
           Next
         </button>
       </div>
-      {errorMsg && <motion.div initial={{
-        opacity: 0
-      }} animate={{
-        opacity: 1,
-        transition: {
-          duration: 0.4,
-          delay: 0.1
-        }
-      }} className="flex items-center gap-1 mt-3">
-        <img src={getImage("redCross.svg")} alt="" />
-        <p className="text-sm font-semibold text-[#da4343]">
-          Username not available
-        </p>
-      </motion.div>}
+      {errorMsg && (
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 0.4,
+              delay: 0.1,
+            },
+          }}
+          className="flex items-center gap-1 mt-3"
+        >
+          <img src={getImage("redCross.svg")} alt="" />
+          <p className="text-sm font-semibold text-[#da4343]">
+            Username not available
+          </p>
+        </motion.div>
+      )}
       {!setDisable && (
         <div className="mt-4 mb-3">
           <p className="text-xs text-[#808080]">Recommended:</p>
@@ -75,23 +81,25 @@ function UsernameSelection(props: IUsernameSelection) {
             {usernameSuggestions.map((suggested) => {
               return (
                 <motion.div
-                initial={{
-                  opacity: 0
-                }}
-                animate={{
-                  opacity: 1,
-                  transition: {
-                    duration: 1,
-                    delay: suggested.id /10
-                  }
-                }}
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    transition: {
+                      duration: 1,
+                      delay: suggested.id / 10,
+                    },
+                  }}
                   key={suggested.id}
                   onClick={() => setInput(suggested.suggestion)}
-                  className={`${input === suggested.suggestion ? "bg-[#F2F2F2] text-[#101010]" : "bg-[#8080800D] text-text-light-secondary"} connectbtn-hover transition-all ease-in-out cursor-pointer px-4 py-2 rounded-full`}
+                  className={`${
+                    input === suggested.suggestion
+                      ? "bg-[#F2F2F2] text-[#101010]"
+                      : "bg-[#8080800D] text-text-light-secondary"
+                  } connectbtn-hover transition-all ease-in-out cursor-pointer px-4 py-2 rounded-full`}
                 >
-                  <p className="text-sm ">
-                    {suggested.suggestion}
-                  </p>
+                  <p className="text-sm ">{suggested.suggestion}</p>
                 </motion.div>
               );
             })}
@@ -100,9 +108,14 @@ function UsernameSelection(props: IUsernameSelection) {
       )}
       {/* info */}
       <div className="border shine-effect flex mt-7 gap-3 border-[#FAFAFA14] rounded-xl p-3">
-        <Lottie style={{
-          cursor: "default"
-        }} options={defaultOptions} height={30} width={50} />
+        <Lottie
+          style={{
+            cursor: "default",
+          }}
+          options={defaultOptions}
+          height={30}
+          width={50}
+        />
         <p className=" font-montserrat text-xs text-[#FAFAFA4D]">
           Your{" "}
           <span className="font-bold font-inter text-[#FFFFFF80]">@tria</span>{" "}
